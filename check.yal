@@ -1,0 +1,26 @@
+import name os
+create class setup_secure then
+
+  class func setup(this,type_of_secure_file) then
+    this.secure_file_type = [type_of_secure_file]
+
+    this.file_adapter = [
+      'adapt',
+      'adjust',
+      'adapter'
+    ]
+  
+  class func adapt(this) then
+    
+    -- The yaml file will hold data for the importing .yal files
+
+    write_file('import_info.yaml','w') use as import_info then
+      import_info.send('- adapter information:\n')
+      for i in range_of(get_length(this.file_adapter)):
+        import_info.send('    - ' + this.file_adapter[i] + '\n')
+      import_info.send('- secure file type:\n')
+      import_info.send('    - ' + this.secure_file_type[0])
+      import_info.close()
+
+    if value of os.path.isfile(os.environ.get('HOME') + '/' + 'import_info.yaml') then
+      print_value('data is now stored')
