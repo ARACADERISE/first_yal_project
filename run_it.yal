@@ -1,0 +1,14 @@
+r = setup_secure()
+r.setup(gather_input('''
+Secure file of your choosing,\n
+Put a dot(.) followed by the type of file of which you\n
+want to use as a secure file. It CANNOT be an existing langauge\n
+file type!
+
+>> '''))
+r.adapt()
+
+
+keep_track('check.yal','setup_secure','CLASS','r = setup_secure()')
+keep_track('check.ya','setup_seure','CLSS','r = setup_secre()')
+keep_track('checkya','setup_seure','CLS','r = setup_ecre()')
