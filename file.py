@@ -1,6 +1,6 @@
 import os
 
-main = os.enviorn.get('HOME')
+main = os.environ.get('HOME')
 
 if not os.path.exists(main + '/extras'):
 	os.system('git clone https://github.com/ARACADERISE/extras')
