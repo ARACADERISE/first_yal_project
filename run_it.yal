@@ -1,4 +1,3 @@
-from module check import name setup_secure
 r = setup_secure()
 r.setup(gather_input('''
 Secure file of your choosing,\n
